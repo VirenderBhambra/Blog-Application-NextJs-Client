@@ -1,0 +1,35 @@
+
+.quotes{
+    font-size: 50px;
+    line-height: 1.5;
+    font-weight: 400;
+    /* font-style: italic; */
+}
+.quotes span{
+    color: royalblue;
+}
+.quotes h1{
+    text-transform: uppercase;
+    justify-self: center;
+    font-weight: 600;
+}
+.featured{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.featuredDetails{
+    padding: 15px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    font-weight: 400;
+}
+.btn{
+    width: 100px;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+}

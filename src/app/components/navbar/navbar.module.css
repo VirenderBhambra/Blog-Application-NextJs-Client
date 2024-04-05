@@ -1,0 +1,60 @@
+.navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+.leftSection{
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bolder;
+    flex: 1;
+    cursor:pointer;
+}
+.middleSection{
+    display: flex;
+    justify-content:center;
+    gap: 80px;
+    flex: 2;
+    font-weight: bolder;
+}
+.link{
+    color: black;
+    text-decoration: none;
+}
+
+.rightSection{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.login{
+    padding: 15px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+.login:hover{
+    background-color: black;
+    color: white;
+    transition:0.4s;
+}
+
+@media screen and (max-width:1200px)
+{
+    .leftSection{
+        font-size: 40px;
+    }
+    .middleSection{
+        font-size: 12px;
+        gap:20px;
+    }
+    .rightSection{
+        font-size: 14px;
+    }
+}
