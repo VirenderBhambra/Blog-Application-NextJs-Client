@@ -46,5 +46,5 @@ Blog Application
 Created a frontend for now. Backend in process...
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot]([https://postimg.cc/nj2q1P0j])
 
