@@ -4,8 +4,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Blog Application
 
-# Current Progress
-Created a frontend for now. Backend in process...
 ## Screenshots
 
 ![App Screenshot](https://i.postimg.cc/QCGSjL7b/frontend.png)
