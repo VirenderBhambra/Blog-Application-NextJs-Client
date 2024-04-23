@@ -25,11 +25,15 @@
     color: black;
     text-decoration: none;
 }
-
+.helloMessage{
+    font-weight: bold;
+}
 .rightSection{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex: 1;
+    gap: 10px;
 }
 .login{
     padding: 15px 10px;

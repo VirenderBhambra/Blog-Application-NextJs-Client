@@ -1,0 +1,63 @@
+.loginContainer {
+    height: 38rem;
+    width: 26rem;
+    background-color: #dfc8b7;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    overflow-y: auto;
+    scrollbar-width:thin;
+    scroll-behavior: smooth;
+  }
+  
+  .heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d4633a; /* orange */
+  }
+  
+  .inputLabel {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .inputField {
+    width: 100%;
+  }
+  
+  .asterick{
+    color: red;
+  }
+  .submitButton {
+    margin-top: 2rem;
+    background-color: #3b687b; /* blue */
+    color: white;
+    height: 3rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .orDivider {
+    margin: 1.5rem 0;
+  }
+  
+  .googleButton {
+    background-color: #6e364b; /* maroon */
+    color: white;
+    height: 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .registerLink {
+    margin-top: 0.5rem;
+    color: #234c76; /* blue */
+    cursor: pointer;
+  }
+  

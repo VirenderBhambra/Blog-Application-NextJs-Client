@@ -1,0 +1,22 @@
+.blogs{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.blog{
+    height: auto;
+    width: 100%;
+    border: 1px solid #242424;
+    margin: 10px 0px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.blog:hover{
+    background-color: antiquewhite;
+    cursor: pointer;
+    border-color: rgb(195, 227, 53);
+    transition:0.4s;
+}

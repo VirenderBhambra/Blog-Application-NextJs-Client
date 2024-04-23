@@ -1,11 +1,13 @@
 .container{
     margin-top: 40px;
-    height: 400px;
+    min-height: 200px;
 }
 .wrapper{
     margin-top: 40px;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 .category{
     padding: 20px 40px;
