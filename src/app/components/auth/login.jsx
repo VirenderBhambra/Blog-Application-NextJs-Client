@@ -28,6 +28,15 @@ const LoginPage = () => {
       expires: expirationTime,
     });
   }
+
+  function setCookie(cookieName, value)
+    {
+      cookies.set(`${cookieName}`, value, {
+        path: "/",
+        sameSite: "strict",
+      });
+    }
+    
   async function onSubmit(data) {
     try {
       data = JSON.stringify(data);
@@ -42,14 +51,15 @@ const LoginPage = () => {
       const token = encodeURIComponent(
         response.headers.authorization.split(" ")[1]
       );
-      cookies.set("author", response.data.user, {
-        path: "/",
-        sameSite: "strict",
-      });
+
+      setCookie("author",response.data.author);
+      setCookie("user",response.data.user);
       setTokenCookie(token);
+
       setAlertMessage(response.data.message);
       setAlertSeverity("success");
       window.location.href = `http://localhost:3000/write`;
+
     } catch (error) {
       console.log(error);
       setAlertMessage(error?.response?.data?.error);

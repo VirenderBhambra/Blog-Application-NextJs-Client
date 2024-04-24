@@ -1,11 +1,27 @@
-"use client";
+'use client'
+import { useEffect, useState } from 'react'; // Import useEffect and useState
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import styles from "./navbar.module.css";
 import Link from "next/link";
-
 import Cookies from "universal-cookie";
+
 export default function Navbar() {
+  const [user, setUser] = useState(null); // Use state to manage user information
   const cookies = new Cookies();
+
+  useEffect(() => {
+    // Check for user information when the component mounts
+    const storedUser = cookies.get("author");
+    setUser(storedUser ? decodeURIComponent(storedUser) : null);
+  }, []); // Empty dependency array ensures this effect runs only once on mount
+
+  const handleLogout = () => {
+    // Function to handle logout
+    cookies.remove("token", { path: "/", sameSite: "strict" });
+    cookies.remove("author", { path: "/" });
+    cookies.remove("user", { path: "/" });
+    setUser(null); // Update state to reflect logout
+  };
 
   return (
     <div className={styles.navbar}>
@@ -20,34 +36,21 @@ export default function Navbar() {
         <Link href="/about" className={styles.link}>
           About
         </Link>
-        {cookies.get("token") && <Link href="/write" className={styles.link}>
-          Write
-        </Link>
-}
+        {user && ( // Render "Write" link if user is logged in
+          <Link href="/write" className={styles.link}>
+            Write
+          </Link>
+        )}
       </div>
       <div className={styles.rightSection}>
-        {cookies.get("author") && (
-          <div className={styles.helloMessage}>{`Hello ${decodeURIComponent(
-            cookies.get("author")
-          )}!`}</div>
-        )}
-        {cookies.get("token") !== undefined ? (
-          <div
-            onClick={() => {
-              cookies.set("token", "", {
-                expires: new Date(0),
-                path: "/",
-                sameSite: "strict",
-              });
-              cookies.remove("author", {
-                path: "/",
-              });
-              window.location.href = `http://localhost:3000/`;
-            }}
-          >
-            <button className={styles.login}>Logout</button>
-          </div>
-        ) : (
+        {user ? ( // Render user greeting and logout link if user is logged in
+          <>
+            <span className={styles.link}>Hello {user}!</span>
+            <button className={styles.login} onClick={handleLogout}>
+              Logout
+            </button>
+          </>
+        ) : ( // Render login link if user is not logged in
           <Link href="/login" className={styles.login}>
             Login
           </Link>

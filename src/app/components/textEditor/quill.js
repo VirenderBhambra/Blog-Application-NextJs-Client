@@ -25,6 +25,7 @@ const Editor = () => {
       content: editorContent,
       hashtags: hastags,
       author: cookies.get("author"),
+      user: cookies.get("user"),
     };
 
     const response = await axios.post("http://localhost:4000/blog/post", data, {
