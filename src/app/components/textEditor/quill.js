@@ -27,12 +27,20 @@ const Editor = () => {
       author: cookies.get("author"),
       user: cookies.get("user"),
     };
+    if (cookies.get("token") === undefined)
+      setMessage("Token is expired Please login again");
+    else {
+      const response = await axios.post(
+        "http://localhost:4000/blog/post",
+        data,
+        {
+          withCredentials: true,
+        }
+      );
 
-    const response = await axios.post("http://localhost:4000/blog/post", data, {
-      withCredentials: true,
-    });
-    console.log(response);
-    setMessage(response.data.message);
+      console.log(response);
+      setMessage(response.data.message);
+    }
   }
   const modules = {
     toolbar: [

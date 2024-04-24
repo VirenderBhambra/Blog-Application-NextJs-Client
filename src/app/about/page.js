@@ -7,7 +7,6 @@ export default function About(){
     
     return(
         <div className={styles.about}>
-            <Link href='/'><Button variant="outlined" >Go Back</Button></Link>
             <div className={styles.info}>
                 <h1>Virender Bhambra</h1>
                 <h2>

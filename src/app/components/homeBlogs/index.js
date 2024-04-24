@@ -1,21 +1,21 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import styles from "./pagination.module.css";
+import styles from "./index.module.css";
 import { Link } from "@mui/material";
 
-export const Pagination = () => {
+export const HomeBlogs = () => {
   const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState(null);
   async function fetchBlog() {
     setLoading(true);
-    const response = await axios.get("http://localhost:4000/blog/all");
+    const response = await axios.get("http://localhost:4000/blog/ften");
     setBlogs(response.data);
     console.log(response);
-  }
+  } 
   useEffect(() => {
     fetchBlog();
-  }, []);
+  },[]); 
 
   return (
     <div className={styles.blogs}>

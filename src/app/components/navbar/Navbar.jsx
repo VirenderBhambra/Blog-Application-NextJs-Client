@@ -36,6 +36,9 @@ export default function Navbar() {
         <Link href="/about" className={styles.link}>
           About
         </Link>
+        <Link href="/blog" className={styles.link}>
+          Blogs
+        </Link>
         {user && ( // Render "Write" link if user is logged in
           <Link href="/write" className={styles.link}>
             Write

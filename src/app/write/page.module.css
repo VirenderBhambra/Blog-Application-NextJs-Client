@@ -2,3 +2,32 @@
     min-height: 120vh;
     width: 100%;
 }
+.blogs{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.blog{
+    height: 400px;
+    width: 400px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    padding: 20px 20px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.blog:hover{
+    background-color: antiquewhite;
+    cursor: pointer;
+    border-color: rgb(195, 227, 53);
+    transition:0.4s;
+}
+.noBlogs{
+    font-weight: bold;
+    text-align: center;
+    color:red;
+    margin-bottom: 20px;
+}

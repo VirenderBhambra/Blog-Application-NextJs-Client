@@ -1,14 +1,10 @@
 .about{
-    background-color: #0B131E;
-    height: 100vh;
+    height: 70vh;
     width: 100%;
     padding: 10px;
-    color: white;
-}
-.info{
-    margin-left: 300px;
-    margin-top:150px;
-    height:auto
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .info h1{
     margin-bottom: 10px;
