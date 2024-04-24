@@ -27,20 +27,16 @@
 </p>
 <hr>
 
-##  Quick Links
+## Contents
 
 > - [ Overview](#-overview)
 > - [ Features](#-features)
 > - [ Repository Structure](#-repository-structure)
-> - [ Modules](#-modules)
 > - [ Getting Started](#-getting-started)
 >   - [ Installation](#-installation)
 >   - [ Running Blog-Application-NextJs-Client](#-running-Blog-Application-NextJs-Client)
->   - [ Tests](#-tests)
-> - [ Project Roadmap](#-project-roadmap)
-> - [ Contributing](#-contributing)
 > - [ License](#-license)
-> - [ Acknowledgments](#-acknowledgments)
+> - [ Message](#-acknowledgments)
 
 ---
 
@@ -164,7 +160,7 @@ This project is protected under the MIT License.
 
 ---
 
-##  Acknowledgments
+##  Message
 
 This is a personal project. If you like you can fork the project and learn the web world.
 
