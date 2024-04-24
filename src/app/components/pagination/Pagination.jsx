@@ -17,22 +17,17 @@ export const Pagination = () => {
     fetchBlog();
   },[]); 
 
-  function handleSlug(slug){
-    console.log(slug);
-  }
   return (
     <div className={styles.blogs}>
-      {blogs?.map((val, ind) => {
-        return (
-          <div className={styles.blog} key={ind} onClick={(val)=>handleSlug(val)}>
+      {blogs?.map((val, ind) => (
+          <div className={styles.blog} key={ind} >
             <div dangerouslySetInnerHTML={{ __html: val.title }} />
             <div style={{display:'flex',fontWeight:'bold'}}>{`Author : ${val.author}` }</div>
             {`${val.description}....`}
-            {/* <div dangerouslySetInnerHTML={{ __html: val.content }} /> */}
             <Link href={val.slug}>Read more</Link>
-          </div>
-        );
-      })}
+         </div>
+        )
+      )}
     </div>
   );
 };
