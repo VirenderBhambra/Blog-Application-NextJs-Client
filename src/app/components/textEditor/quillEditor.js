@@ -6,8 +6,6 @@ const DynamicQuillEditor = dynamic(() => import("./quill"), {
   loading: () => <p>Loading ...</p>,
 });
 
-const QuillEditor = (props) => {
+export const QuillEditor = (props) => {
   return <DynamicQuillEditor {...props} />;
 };
-
-export default QuillEditor;

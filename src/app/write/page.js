@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import QuillEditor from "../components/textEditor/QuillEditor";
+import {QuillEditor} from "../components/textEditor/quillEditor";
 import axios from "axios";
 import { Link } from "@mui/material";
 import styles from "./page.module.css";
