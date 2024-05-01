@@ -5,7 +5,7 @@
     <h1 align="center">BLOG-APPLICATION-NEXTJS-CLIENT</h1>
 </p>
 <p align="center">
-    <em>HTTP error 401 for prompt `slogan`</em>
+   https://blog-application-next-js-ten.vercel.app/
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/VirenderBhambra/Blog-Application-NextJs-Client?style=flat&color=0080ff" alt="license">
@@ -41,7 +41,8 @@
 ---
 
 ##  Overview
-
+Server is on render.com and may take 10 to 20 seconds to start. You can open link and wait for sometime for data fetching for first time.
+Deployment Link - https://blog-application-next-js-ten.vercel.app/
 This ia a Full Stack Web Application for Blogs. This repository contains the frontend files of the project.
 For backend files please visit https://github.com/VirenderBhambra/Blog-Application-Express-Server
 
