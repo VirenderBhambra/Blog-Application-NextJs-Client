@@ -57,7 +57,7 @@ const LoginPage = () => {
         setCookie("author", response.data.author);
         setCookie("user", response.data.user);
         setTokenCookie(token);
-        window.location.href = `http://localhost:3000/write`;
+        window.location.href = `https://blog-application-next-js-ten.vercel.app/write`;
       }
       setAlertMessage(response.data.message);
       setAlertSeverity("success");
