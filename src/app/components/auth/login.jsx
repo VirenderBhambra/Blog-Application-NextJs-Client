@@ -71,7 +71,7 @@ const LoginPage = () => {
 
   // Function to encrypt form data
   function encryptFormData(formData) {
-    const encrypted = CryptoJS.AES.encrypt(formData, "secret_key").toString();
+    const encrypted = CryptoJS.AES.encrypt(formData, process.env.KEY).toString();
     return { data: encrypted };
   }
 
