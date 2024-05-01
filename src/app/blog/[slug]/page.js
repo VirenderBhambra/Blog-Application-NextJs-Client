@@ -2,7 +2,7 @@ import axios from 'axios';
 import styles from './page.module.css';
 async function getData(slug) {
   try {
-    const response = await axios.get(`http://localhost:4000/blog/s/${slug}`,{ next: { revalidate: 3600 } });
+    const response = await axios.get(`https://blog-application-express-server.onrender.com/blog/s/${slug}`,{ next: { revalidate: 3600 } });
     return response.data;
   } catch (error) {
     console.error("Error fetching post:", error);

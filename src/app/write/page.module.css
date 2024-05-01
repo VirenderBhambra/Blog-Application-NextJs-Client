@@ -1,5 +1,5 @@
 .dashboard{
-    min-height: 120vh;
+    min-height: 100vh;
     width: 100%;
 }
 .blogs{
@@ -19,6 +19,29 @@
     overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+.headers{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+}
+.create{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #FFE0B5;
+    border-radius: 10px;
+}
+.create:hover{
+    background-color: #D8AE7E;
+    transition:0.4s;
+    border-radius: 10px;
+}
+
 .blog:hover{
     background-color: antiquewhite;
     cursor: pointer;
@@ -30,4 +53,9 @@
     text-align: center;
     color:red;
     margin-bottom: 20px;
+}
+.tools{
+    display: flex;;
+    justify-content: flex-end;
+    
 }

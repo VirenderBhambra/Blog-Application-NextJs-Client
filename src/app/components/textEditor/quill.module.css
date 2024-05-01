@@ -4,6 +4,7 @@
     flex-direction: column;
     margin-bottom: 20px;
     min-height: 100vh;
+    width: 100%;
 }
 .quillContainer{
     padding: 10px;
@@ -11,4 +12,8 @@
 .quillContent{
     height:42vh;
     padding: 10px;
+}
+.postContainer{
+    display: flex;
+    justify-content: flex-end;
 }

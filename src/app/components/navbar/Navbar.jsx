@@ -21,6 +21,7 @@ export default function Navbar() {
     cookies.remove("author", { path: "/" });
     cookies.remove("user", { path: "/" });
     setUser(null); // Update state to reflect logout
+    window.location.href="/"
   };
 
   return (

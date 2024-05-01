@@ -9,7 +9,7 @@ export const Pagination = () => {
   const [blogs, setBlogs] = useState(null);
   async function fetchBlog() {
     setLoading(true);
-    const response = await axios.get("http://localhost:4000/blog/all");
+    const response = await axios.get("https://blog-application-express-server.onrender.com/blog/all");
     setBlogs(response.data);
     console.log(response);
   }

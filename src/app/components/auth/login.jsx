@@ -25,18 +25,18 @@ const LoginPage = () => {
     cookies.set("token", `Bearer ${token}`, {
       path: "/",
       sameSite: "strict",
+      secure: true,
       expires: expirationTime,
     });
   }
 
-  function setCookie(cookieName, value)
-    {
-      cookies.set(`${cookieName}`, value, {
-        path: "/",
-        sameSite: "strict",
-      });
-    }
-    
+  function setCookie(cookieName, value) {
+    cookies.set(`${cookieName}`, value, {
+      path: "/",
+      sameSite: "strict",
+    });
+  }
+
   async function onSubmit(data) {
     try {
       data = JSON.stringify(data);
@@ -44,22 +44,22 @@ const LoginPage = () => {
       console.log(encryptedData);
       const response = await axios.post(
         page
-          ? `http://localhost:4000/user/login`
-          : `http://localhost:4000/user/register`,
+          ? `https://blog-application-express-server.onrender.com/user/login`
+          : `https://blog-application-express-server.onrender.com/user/register`,
         encryptedData
       );
-      const token = encodeURIComponent(
-        response.headers.authorization.split(" ")[1]
-      );
 
-      setCookie("author",response.data.author);
-      setCookie("user",response.data.user);
-      setTokenCookie(token);
-
+      if (page) {
+        const token = encodeURIComponent(
+          response.headers.authorization.split(" ")[1]
+        );
+        setCookie("author", response.data.author);
+        setCookie("user", response.data.user);
+        setTokenCookie(token);
+        window.location.href = `http://localhost:3000/write`;
+      }
       setAlertMessage(response.data.message);
       setAlertSeverity("success");
-      window.location.href = `http://localhost:3000/write`;
-
     } catch (error) {
       console.log(error);
       setAlertMessage(error?.response?.data?.error);
@@ -183,7 +183,7 @@ const LoginPage = () => {
           {alertMessage}
         </Alert>
       )}
-      <Divider sx={{ my: 2 }} className={styles.orDivider}>
+      {/* <Divider sx={{ my: 2 }} className={styles.orDivider}>
         <p>Or, Login with</p>
       </Divider>
       <Box
@@ -198,21 +198,21 @@ const LoginPage = () => {
         <button type="submit" className={styles.googleButton}>
           <GoogleIcon height={40} width={40} style={{ color: "white" }} />
           Sign up with Google
-        </button>
+        </button> */}
 
-        <p className={styles.registerLink}>
-          {page ? "Don't have an account?" : "Have an account?"}
-          <span
-            className="text-blue-600 cursor-pointer"
-            onClick={() => {
-              setPage(!page);
-              reset(); // Reset form when switching between login and register
-            }}
-          >
-            {page ? "Register here" : "Login"}
-          </span>
-        </p>
-      </Box>
+      <p>
+        {page ? "Don't have an account?" : "Have an account?"}
+        <span
+          className={styles.registerLink}
+          onClick={() => {
+            setPage(!page);
+            reset(); // Reset form when switching between login and register
+          }}
+        >
+          {page ? "Register here" : "Login"}
+        </span>
+      </p>
+      {/* </Box> */}
     </div>
   );
 };
