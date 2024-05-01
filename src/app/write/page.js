@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Editor from "../components/textEditor/quill";
+import QuillEditor from "../components/textEditor/QuillEditor";
 import axios from "axios";
 import { Link } from "@mui/material";
 import styles from "./page.module.css";
@@ -125,7 +125,7 @@ export default function Write() {
             </div>
           ))
         ) : (
-          <Editor slug={props} />
+          <QuillEditor slug={props} theme ="snow" />
         )}
       </div>
     </div>

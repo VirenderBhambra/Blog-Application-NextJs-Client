@@ -38,6 +38,7 @@ const LoginPage = () => {
   }
 
   async function onSubmit(data) {
+    console.log(data)
     try {
       data = JSON.stringify(data);
       const encryptedData = encryptFormData(data);
@@ -48,7 +49,7 @@ const LoginPage = () => {
           : `https://blog-application-express-server.onrender.com/user/register`,
         encryptedData
       );
-
+      console.log(response);
       if (page) {
         const token = encodeURIComponent(
           response.headers.authorization.split(" ")[1]
@@ -71,7 +72,8 @@ const LoginPage = () => {
 
   // Function to encrypt form data
   function encryptFormData(formData) {
-    const encrypted = CryptoJS.AES.encrypt(formData, process.env.KEY).toString();
+    console.log(process.env.NEXT_JS_KEY)
+    const encrypted = CryptoJS.AES.encrypt(formData,process.env.NEXT_PUBLIC_KEY).toString();
     return { data: encrypted };
   }
 
